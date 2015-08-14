@@ -35,7 +35,7 @@ settings.config(
 			localStorage.setItem('hash', jsonObj.name );
 			console.log('hash passed was: ' + localStorage.getItem('hash'));
 		}
-
+		
 		console.log('Refreshing stats...');
 		refreshStats();
 		mainCard.body('\nLoaded Profile is:\n' + reservedName);
@@ -243,7 +243,12 @@ hash = localStorage.getItem('hash');
 refreshStats();
 mainCard = new UI.Card({
 	title: 'Tagpro Stats',
-	scrollable: false
+	scrollable: false,
+	action: {
+		up: 'images/action_refresh.png',
+		select: 'images/action_stats.png',
+		down: 'images/action_info.png'
+	}
 });
 mainCard.body('\nLoaded Profile is:\n' + reservedName);
 mainCard.show();
@@ -291,6 +296,18 @@ mainCard.on('click', 'select', function(e) {
 	refreshStats();
 	console.log('Refreshing stats...');
 	mainCard.show();
+  });
+
+  mainCard.on('click', 'down', function(e) {
+	console.log('Reached mainCard.on(\'click\', \'down\')');
+	var infoCard = new UI.Card({
+		title: 'Info',
+		body: 'Author: /u/blaziken311\n' +
+					'This application was written in Pebble.JS.\nSource code is available on Github @ https://github.com/blaziken311/TP-Stats-Pebble.\n' +
+					'This release is very buggy and coded by a guy that knows 0 Javascript. Take this as a proof of concept until I actually learn JS.',
+		scrollable: true
+	});
+	infoCard.show();
   });
   menu.show();
 }); // close mainCard.on(event, desc, callback)

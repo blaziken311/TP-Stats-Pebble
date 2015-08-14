@@ -28,6 +28,21 @@
                 "file": "fonts/UbuntuMono-Regular.ttf",
                 "name": "MONO_FONT_14",
                 "type": "font"
+            },
+            {
+                "file": "images/action_refresh.png",
+                "name": "IMAGES_ACTION_REFRESH_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/action_stats.png",
+                "name": "IMAGES_ACTION_STATS_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/action_info.png",
+                "name": "IMAGES_ACTION_INFO_PNG",
+                "type": "png"
             }
         ]
     },
