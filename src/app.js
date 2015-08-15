@@ -292,12 +292,6 @@ mainCard.on('click', 'select', function(e) {
 	}
   });
 
-  mainCard.on('click', 'up', function(e) {
-	refreshStats();
-	console.log('Refreshing stats...');
-	mainCard.show();
-  });
-
   mainCard.on('click', 'down', function(e) {
 	console.log('Reached mainCard.on(\'click\', \'down\')');
 	var infoCard = new UI.Card({
@@ -308,6 +302,11 @@ mainCard.on('click', 'select', function(e) {
 		scrollable: true
 	});
 	infoCard.show();
+  });
+  mainCard.on('click', 'up', function(e) {
+	refreshStats();
+	console.log('Refreshing stats...');
+	mainCard.show();
   });
   menu.show();
 }); // close mainCard.on(event, desc, callback)

@@ -30,8 +30,8 @@
                 "type": "font"
             },
             {
-                "file": "images/action_refresh.png",
-                "name": "IMAGES_ACTION_REFRESH_PNG",
+                "file": "images/action_info.png",
+                "name": "IMAGES_ACTION_INFO_PNG",
                 "type": "png"
             },
             {
@@ -40,8 +40,8 @@
                 "type": "png"
             },
             {
-                "file": "images/action_info.png",
-                "name": "IMAGES_ACTION_INFO_PNG",
+                "file": "images/action_refresh.png",
+                "name": "IMAGES_ACTION_REFRESH_PNG",
                 "type": "png"
             }
         ]
